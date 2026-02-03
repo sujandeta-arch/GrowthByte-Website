@@ -18,7 +18,7 @@ export default function Footer() {
 
   const resourceLinks = [
     { name: 'FAQ', href: '/#faq' },
-    { name: 'Pricing', href: '/pricing' },
+    // { name: 'Pricing', href: '/pricing' }, // Hidden for now
     { name: 'Contact', href: '/contact' },
   ]
 
