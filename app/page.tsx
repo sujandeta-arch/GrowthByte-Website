@@ -6,7 +6,7 @@ import ServicesSection from '@/components/sections/ServicesSection'
 // Lazy load below-the-fold sections for better initial load performance
 const WhyChooseSection = dynamic(() => import('@/components/sections/WhyChooseSection'))
 const ProcessSection = dynamic(() => import('@/components/sections/ProcessSection'))
-const PricingSection = dynamic(() => import('@/components/sections/PricingSection'))
+// const PricingSection = dynamic(() => import('@/components/sections/PricingSection')) // Hidden for now
 const FAQSection = dynamic(() => import('@/components/sections/FAQSection'))
 const ContactSection = dynamic(() => import('@/components/sections/ContactSection'))
 
@@ -26,7 +26,7 @@ export default function HomePage() {
       <ServicesSection />
       <WhyChooseSection />
       <ProcessSection />
-      <PricingSection />
+      {/* <PricingSection /> */}
       <FAQSection />
       <ContactSection />
     </>

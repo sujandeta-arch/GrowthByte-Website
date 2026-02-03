@@ -4,7 +4,7 @@ export const NAVIGATION_ITEMS = [
   { name: 'Case Studies', href: '/#case-studies' },
   { name: 'Process', href: '/#process' },
   { name: 'About', href: '/about' },
-  { name: 'Pricing', href: '/pricing' },
+  // { name: 'Pricing', href: '/pricing' }, // Hidden for now
   { name: 'Contact', href: '/contact' },
 ] as const
 
