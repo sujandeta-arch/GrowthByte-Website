@@ -126,14 +126,14 @@ export function ContactForm() {
 
       <div>
         <label htmlFor="phone" className="block text-sm font-semibold text-ink mb-2">
-          Contact number
+          Contact number(Optional)
         </label>
         <input
           type="tel"
           id="phone"
           name="phone"
           className="w-full px-4 py-3 border border-surface-border rounded-lg text-ink bg-surface placeholder-ink-20 focus:border-teal focus:ring-1 focus:ring-teal outline-none transition-all text-sm"
-          placeholder="Optional"
+          placeholder="+91 9876543210"
           disabled={isSubmitting}
         />
       </div>
