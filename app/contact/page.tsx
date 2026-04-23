@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { CONTACT_INFO } from '@/lib/constants'
+import { ContactForm } from './ContactForm'
 
 export const metadata: Metadata = {
   title: 'Book a Strategy Call — GrowthByte',
@@ -69,84 +70,7 @@ export default function ContactPage() {
             {/* Right — form */}
             <div className="bg-surface rounded-2xl border border-surface-border p-7 lg:p-8">
               <h2 className="text-[1.25rem] font-bold text-ink mb-6">Tell us about your situation</h2>
-              <form className="space-y-5">
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-semibold text-ink mb-2">Full name *</label>
-                    <input
-                      type="text" id="name" name="name" required
-                      className="w-full px-4 py-3 border border-surface-border rounded-lg text-ink bg-surface placeholder-ink-20 focus:border-teal focus:ring-1 focus:ring-teal outline-none transition-all text-sm"
-                      placeholder="Your name"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-semibold text-ink mb-2">Work email *</label>
-                    <input
-                      type="email" id="email" name="email" required
-                      className="w-full px-4 py-3 border border-surface-border rounded-lg text-ink bg-surface placeholder-ink-20 focus:border-teal focus:ring-1 focus:ring-teal outline-none transition-all text-sm"
-                      placeholder="you@company.com"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <div>
-                    <label htmlFor="company" className="block text-sm font-semibold text-ink mb-2">Company</label>
-                    <input
-                      type="text" id="company" name="company"
-                      className="w-full px-4 py-3 border border-surface-border rounded-lg text-ink bg-surface placeholder-ink-20 focus:border-teal focus:ring-1 focus:ring-teal outline-none transition-all text-sm"
-                      placeholder="Company name"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="revenue" className="block text-sm font-semibold text-ink mb-2">Annual revenue</label>
-                    <select
-                      id="revenue" name="revenue"
-                      className="w-full px-4 py-3 border border-surface-border rounded-lg text-ink bg-surface focus:border-teal focus:ring-1 focus:ring-teal outline-none transition-all text-sm"
-                    >
-                      <option value="">Select range</option>
-                      <option value="under-5cr">Under ₹5Cr</option>
-                      <option value="5-20cr">₹5Cr – ₹20Cr</option>
-                      <option value="20-50cr">₹20Cr – ₹50Cr</option>
-                      <option value="50-100cr">₹50Cr – ₹100Cr</option>
-                      <option value="over-100cr">Over ₹100Cr</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div>
-                  <label htmlFor="industry" className="block text-sm font-semibold text-ink mb-2">Industry</label>
-                  <select
-                    id="industry" name="industry"
-                    className="w-full px-4 py-3 border border-surface-border rounded-lg text-ink bg-surface focus:border-teal focus:ring-1 focus:ring-teal outline-none transition-all text-sm"
-                  >
-                    <option value="">Select industry</option>
-                    <option value="saas">SaaS</option>
-                    <option value="d2c">D2C / E-Commerce</option>
-                    <option value="healthcare">Healthcare</option>
-                    <option value="fintech">FinTech</option>
-                    <option value="professional-services">Professional Services</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-sm font-semibold text-ink mb-2">What is your biggest growth challenge right now? *</label>
-                  <textarea
-                    id="message" name="message" rows={4} required
-                    className="w-full px-4 py-3 border border-surface-border rounded-lg text-ink bg-surface placeholder-ink-20 focus:border-teal focus:ring-1 focus:ring-teal outline-none transition-all text-sm resize-none"
-                    placeholder="Where are you stuck? What have you tried? What does success look like in 12 months?"
-                  />
-                </div>
-
-                <button type="submit" className="btn-primary w-full btn-lg">
-                  Request Strategy Call
-                </button>
-
-                <p className="text-xs text-ink-40 text-center leading-relaxed">
-                  We respond within 24 hours. No spam. No pitch decks. Just a real conversation.
-                </p>
-              </form>
+              <ContactForm />
             </div>
 
           </div>
